@@ -1,3 +1,5 @@
 flask
 pywebview
-
+pyinstaller
+PyGObject
+pyobjc
