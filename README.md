@@ -1,4 +1,10 @@
-# WhatsAnApp
+<div align="center">
+    <img src="assets/WhatsAnApp.png">
+    <h1>WhatsAnApp</h1>
+    <p>WhatsApp, with a sleek and modified UI.</p>
+</div>
+
+---
 WhatsAnApp (Also known as What's an app?) is a UI modification to WhatsApp's Shitty UI and Removing unwanted features.
 
 WhatsAnApp is a UI modification. Not a full modification for WhatsApp. We're not trying to get our ass sued by Meta.
