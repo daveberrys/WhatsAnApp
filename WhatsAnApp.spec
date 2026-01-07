@@ -30,9 +30,7 @@ a = Analysis(
     pathex=[],
     binaries=binaries_wv,
     datas=[('assets', 'assets')] + datas_wv,
-    hiddenimports=[
-        hidimports
-    ] + hiddenimports_wv,
+    hiddenimports= hidimports + hiddenimports_wv,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
