@@ -54,7 +54,7 @@ jobs:
               run: pip install -r python/requirements-linux.txt
             
             - name: Compile with PyInstaller
-              run: pyinstaller python/WhatsAnApp.spec
+              run: pyinstaller WhatsAnApp.spec
 
             - name: Rename Build (Windows)
               if: runner.os == 'Windows'
