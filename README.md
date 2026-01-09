@@ -23,7 +23,7 @@ We believe that we deserve a Better UI than whatever the fuck they made. Going a
 
 If you want us to add modification (message logs, read receips and such) to WhatsApp web, we're not doing it. We're not risking a cease and desist letter from Meta, the parent company of WhatsApp.
 
-> [!INFO]
+> [!NOTE]
 > Please note that if you want modification, do it yourself or ask someone to do it. Not the official devs of `WhatsAnApp`. If you do make modifications, be VERY aware that you have a high chance of getting a cease and desist from Meta.
 
 ---
@@ -63,7 +63,7 @@ venv/bin/pyinstaller WhatsAnApp.spec
 </details>
 
 In Windows, here are the steps: (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
-> [!INFO]
+> [!IMPORTANT]
 > Since the module Pythonnet fails to build on Python 3.14.x on Windows, you must downgrade to 3.13.x before setting up the environment.
 
 ```powershell
