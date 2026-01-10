@@ -1,13 +1,13 @@
 <div align="center">
-    <img src="assets/WhatsAnApp.png" width=140>
+    <img src="assets/WhatsAnApp.png" width=250>
     <h1>WhatsAnApp</h1>
     <p>WhatsApp, with a sleek and modified UI.</p>
 </div>
 
 <div align="center">
-    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#required-dependencies-to-open-the-app">Required dependencies to open the app</a>
-    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#required-dependencies-to-open-the-app">How to build the app</a>
-    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#download-for">Download the app</a>
+    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#required-dependencies-to-open-the-app">Required dependencies to open the app</a> <br>
+    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#required-dependencies-to-open-the-app">How to build the app</a> <br>
+    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#download-for">Download the app</a> <br>
     <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#heres-how-the-app-works">How the app works</a>
 </div>
 
@@ -29,24 +29,26 @@ We believe that we deserve a Better UI than whatever the fuck they made. Going a
 ---
 
 ### Here's how the app works:
-**Python Project**
+```text
+Python Project
   v
 Libraries:
-- **PyWebView**
-- **Flask**
-- **PyInstaller**
+- PyWebView
+- Flask
+- PyInstaller
   v
-**Flask** runs a local server (https://web.whatsapp.com)
-**PyWebView** makes a new indow and injects code (CSS/JS)
-**Python** handles reading files, creating new files, editing, and such.
-**PyInstaller** compiles the project into one file.
+Flask runs a local server (https://web.whatsapp.com)
+PyWebView makes a new indow and injects code (CSS/JS)
+Python handles reading files, creating new files, editing, and such.
+PyInstaller compiles the project into one file.
   v
-**Benefits?**
-Low chance of getting temp/perm ban from *Meta*
+Benefits?
+Low chance of getting temp/perm ban from Meta
 Easily be able to make your own theme with CSS/JS
 Better UI instead of Meta's UI.
 Native App for Linux (And a Better UI for Win+Mac)
 Open source, free forever.
+```
 
 ---
 
