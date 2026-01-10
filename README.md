@@ -1,7 +1,14 @@
 <div align="center">
-    <img src="assets/WhatsAnApp.png" width=80>
+    <img src="assets/WhatsAnApp.png" width=140>
     <h1>WhatsAnApp</h1>
     <p>WhatsApp, with a sleek and modified UI.</p>
+</div>
+
+<div align="center">
+    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#required-dependencies-to-open-the-app">Required dependencies to open the app</a>
+    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#required-dependencies-to-open-the-app">How to build the app</a>
+    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#download-for">Download the app</a>
+    <a href="https://github.com/daveberrys/WhatsAnApp?tab=readme-ov-file#heres-how-the-app-works">How the app works</a>
 </div>
 
 > [!CAUTION]
@@ -21,6 +28,28 @@ We believe that we deserve a Better UI than whatever the fuck they made. Going a
 
 ---
 
+### Here's how the app works:
+**Python Project**
+  v
+Libraries:
+- **PyWebView**
+- **Flask**
+- **PyInstaller**
+  v
+**Flask** runs a local server (https://web.whatsapp.com)
+**PyWebView** makes a new indow and injects code (CSS/JS)
+**Python** handles reading files, creating new files, editing, and such.
+**PyInstaller** compiles the project into one file.
+  v
+**Benefits?**
+Low chance of getting temp/perm ban from *Meta*
+Easily be able to make your own theme with CSS/JS
+Better UI instead of Meta's UI.
+Native App for Linux (And a Better UI for Win+Mac)
+Open source, free forever.
+
+---
+
 If you want us to add modification (message logs, read receips and such) to WhatsApp web, we're not doing it. We're not risking a cease and desist letter from Meta, the parent company of WhatsApp.
 
 > [!NOTE]
@@ -28,10 +57,10 @@ If you want us to add modification (message logs, read receips and such) to What
 
 ---
 
-Available in:
-- Linux
-- Windows
-- MacOS 
+## Download for:
+- [Windows](https://nightly.link/daveberrys/WhatsAnApp/workflows/building/main/WhatsAnApp-Windows.zip)
+- [MacOS](https://nightly.link/daveberrys/WhatsAnApp/workflows/building/main/WhatsAnApp-MacOS.zip)
+- [Linux](https://nightly.link/daveberrys/WhatsAnApp/workflows/building/main/WhatsAnApp-Linux.zip)
 
 ---
 
@@ -47,7 +76,7 @@ If you're using Windows, all you need is WebView2 which is built in. If you some
 If you're using MacOS, you don't need any libraries to open the app. Just open the app and it'll launch with no problems at all. (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
 
 ## Building WhatsAnApp:
-In Linux Ubuntu, here are the steps: (Confirmed by [@Daveberrys](https://daveberry.netlify.app/))
+### In Linux Ubuntu, here are the steps: (Confirmed by [@Daveberrys](https://daveberry.netlify.app/))
 ```bash
 sudo apt update && sudo apt install -y python3 python3-pip python3-venv xvfb libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0
 git clone https://github.com/daveberrys/WhatsAnApp/
@@ -62,7 +91,7 @@ venv/bin/pyinstaller WhatsAnApp.spec
     <img src="readme/Linux (Daveberry).png"/>
 </details>
 
-In Windows, here are the steps: (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
+### In Windows, here are the steps: (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
 > [!IMPORTANT]
 > Since the module Pythonnet fails to build on Python 3.14.x on Windows, you must downgrade to 3.13.x before setting up the environment.
 
@@ -91,7 +120,7 @@ venv\Scripts\pyinstaller WhatsAnApp.spec
      <img src="readme/Windows (TK50P).png"/> 
 </details>
 
-In MacOS, here are the steps: (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
+### In MacOS, here are the steps: (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
 ```bash
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
