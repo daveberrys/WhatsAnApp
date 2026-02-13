@@ -1,41 +1,45 @@
 import os
 import sys
-import threading
-import time
 
-import webview as wv
+from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QApplication
 
 import src.back.system.settings as settings
 import src.back.utils.print as print
+from src.back.system.pyqt6 import SystemTrayIcon, WhatsAppWindow
 
 def startUp(debugMode=False):
     settings.checkIfExist()
-    print.success("Flask and PyWebView is starting! Please wait...")
-
-    projectRoot = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    print.success("PyQt6 and QtWebView2 is starting! Please wait...")
 
     if debugMode:
-        print.debug("From now on, below this print, PyWebView's logging.")
+        print.debug("Debug mode enabled for WhatsAnApp")
 
-    wv.create_window(
-        "WhatsAnApp",
-        "https://web.whatsapp.com/",
-        width=1280,
-        height=720,
-    )
+    # Create Qt application
+    app = QApplication(sys.argv)
+    app.setApplicationName("WhatsAnApp")
+    app.setQuitOnLastWindowClosed(False)
 
-    if not sys.platform == "win32":
-        iconPath = os.path.join(projectRoot, "assets", "WhatsAnApp.png")
-    else:
+    # Get icon path
+    projectRoot = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    if sys.platform == "win32":
         iconPath = os.path.join(projectRoot, "assets", "WhatsAnApp.ico")
-    print.debug(f"Using icon PyWebView icon at: {iconPath}")
+    else:
+        iconPath = os.path.join(projectRoot, "assets", "WhatsAnApp.png")
 
-    wv.start(
-        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        storage_path=settings.fullAppConfig + "Chromium Storage",
-        private_mode=False,
-        icon=iconPath,
-        
-        # Debugging purposes.
-        debug=debugMode,
-    )
+    # Create main window
+    window = WhatsAppWindow(iconPath, debugMode)
+
+    # Create system tray
+    if os.path.exists(iconPath):
+        trayIcon = SystemTrayIcon(QIcon(iconPath), window)
+    else:
+        print.warning(f"Icon not found at {iconPath}")
+        trayIcon = SystemTrayIcon(QIcon(), window)
+
+    trayIcon.show()
+    window.show()
+
+    # Start event loop
+    print.success("WhatsAnApp is ready!")
+    sys.exit(app.exec())

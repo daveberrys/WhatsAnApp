@@ -1,3 +1,8 @@
-pywebview
+PyQt6
+PyQt6-WebEngine
+plyer
 pyinstaller
 termcolor
+pywin32; sys_platform == 'win32'
+qtwebview2; sys_platform == 'win32'
+pyobjc; sys_platform == 'darwin'

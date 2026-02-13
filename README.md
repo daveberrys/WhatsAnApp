@@ -33,11 +33,14 @@ The full native version of Whatsapp is too bloated, taking about 1-2+ **GB** of 
 Python Project
   v
 Libraries:
-- PyWebView
+- PyQt6
+- PyQt6-WebEngine
+- Plyer
 - PyInstaller
   v
-PyWebView makes a new window, and opens the whatsapp website.
+PyQt6 makes a new window, and opens the whatsapp website.
 Python handles reading files, creating new files, editing, and such.
+Plyer shows the native notification depending on your operating system.
 PyInstaller compiles the project into one file.
   v
 Benefits?
@@ -145,3 +148,8 @@ venv/bin/pyinstaller WhatsAnApp.spec
     <summary>Screenshot Preview (By TK50P)</summary>
     <img src="readme/macOS (TK50P).png"/>
 </details>
+
+---
+
+> [!CAUTION]
+> When trying to do a PR or an Issue, please note that *most* of the code that was written was given to me by **Gemini (3.0 Flash)** from doing quizzes, not trusting blindly trusting AI to write code for me. I'm not good with remember due to me having short-term memory loss. Sorry in advance.
