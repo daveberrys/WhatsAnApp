@@ -150,6 +150,12 @@ class WhatsAppWindow(BaseWindow):
         if os.path.exists(self.iconPath):
             self.setWindowIcon(QIcon(self.iconPath))
             print.debug(f"Using window icon at: {self.iconPath}")
+    
+    def closeEvent(self, event):
+        """Intercept the close event to hide to tray instead of quitting"""
+        if self.isVisible():
+            event.ignore()
+            self.hide()
 
 
 class SystemTrayIcon(QSystemTrayIcon):
@@ -165,16 +171,6 @@ class SystemTrayIcon(QSystemTrayIcon):
 
     def _createMenu(self):
         menu = QMenu()
-
-        showAction = QAction("Show WhatsAnApp", menu)
-        showAction.triggered.connect(self._showWindow)
-        menu.addAction(showAction)
-
-        hideAction = QAction("Hide to Tray", menu)
-        hideAction.triggered.connect(self._hideWindow)
-        menu.addAction(hideAction)
-
-        menu.addSeparator()
 
         quitAction = QAction("Quit", menu)
         quitAction.triggered.connect(QApplication.quit)

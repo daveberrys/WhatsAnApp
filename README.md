@@ -34,7 +34,7 @@ Python Project
   v
 Libraries:
 - PyQt6
-- PyQt6-WebEngine
+- PyQt6-WebEngine (or QtWebView in Windows)
 - Plyer
 - PyInstaller
   v
