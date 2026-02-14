@@ -18,7 +18,7 @@
 > We've gone ahead and done a 180 and made a native app instead. I (Daveberry) found out that it uses less RAM than native windows, so why not make this an alternative to the native Whatsapp app? And we're completely removing the UI change, but still keeping loading themes.
 
 > [!WARNING]
-> Linux version of this app is currently a bit stupid. At 140+ mb compiled. We'll try to find a fix, don't worry fellow Linux users.
+> **Windows** is the only one has been tested thoroughly and working perfect. Neither Linux and macOS hasn't been tested (sorta). It works, but videos don't work. WSL reported as videos not working whatsoever with PyQT6-WebEngine. If you're a programmer who uses Linux or macOS and would love to help, you can help us out by fixing this issue! Either with a seperate library or something else.
 
 ---
 
@@ -81,11 +81,11 @@ If you're using macOS, you don't need any libraries to open the app. Just open t
 ## Building WhatsAnApp:
 ### In Linux Ubuntu, here are the steps: (Confirmed by [@Daveberrys](codedave.pages.dev/))
 ```bash
-sudo apt update && sudo apt install -y python3 python3-pip python3-venv xvfb libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0
+sudo apt update && sudo apt install -y libnss3 libxcomposite1 libxcursor1 libxi6 libxtst6 libasound2t64 libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 libdrm2 libgbm1 libgtk-3-0t64 libpangocairo-1.0-0 libxkbcommon0 libxshmfence1
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
 python3 -m venv venv
-venv/bin/pip install -r python/requirements-linux.txt
+venv/bin/pip install -r requirements-linux.txt
 venv/bin/pyinstaller WhatsAnApp.spec
 ```
 <details>
@@ -128,7 +128,7 @@ python -3.13 -m venv venv
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
 python3 -m venv venv
-venv\Scripts\pip install -r python\requirements.txt
+venv\Scripts\pip install -r requirements.txt
 venv\Scripts\pyinstaller WhatsAnApp.spec
 ```
 <details>
@@ -141,7 +141,7 @@ venv\Scripts\pyinstaller WhatsAnApp.spec
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
 python3 -m venv venv
-venv/bin/pip install -r python/requirements.txt
+venv/bin/pip install -r requirements.txt
 venv/bin/pyinstaller WhatsAnApp.spec
 ```
 <details>
