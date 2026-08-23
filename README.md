@@ -1,3 +1,5 @@
+<!-- action go -->
+
 <div align="center">
     <img src="assets/WhatsAnApp.png" width=250>
     <h1>WhatsAnApp</h1>
@@ -19,6 +21,9 @@
 
 > [!WARNING]
 > Linux version of this app is currently a bit stupid. At 140+ mb compiled. We'll try to find a fix, don't worry fellow Linux users.
+
+> [!NOTE]
+> This app development is paused.
 
 ---
 
